@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-$l*4t^ci8q=e33s!z(b&*@n#dmi60jh@35_*k%a1li@5f()g3_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -129,6 +129,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -156,9 +158,7 @@ SIMPLE_JWT = {
     'TOKEN_BLACKLIST_ENABLED': True,
 }
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # Example: your friend’s Live Server IP + port
-    # or "https://your-friend-frontend.com" if deployed
-]
+CORS_ALLOW_ALL_ORIGINS = True
+
 
 
