@@ -1,0 +1,26 @@
+this is registeration page
+{%for message in messages%}
+<h3 style="color: red">{{message}}</h3>
+{%endfor%}
+<form action="{%url 'register'%}" method="post">
+    {%csrf_token%}
+    <input type="text" placeholder="username" name="username">
+    <br>
+    <br>
+    <input type="text" placeholder="create password"  name="password1">
+    <br>
+    <br>
+    <input type="text" placeholder="come again" name="password2" >
+    <br>
+    <br>
+    <input type="text" placeholder="email" name="email">
+    <br>
+    <br>
+    <input type="text" placeholder="lab id (if any)" name="lab_id">
+    <br>
+    <br>
+    <br><br><br><br>
+    <button type="submit">submit</button>
+
+
+</form>

@@ -1,0 +1,10 @@
+this is login page
+{%for message in messages %}
+<h3 style="color: red;">{{message}}</h3>
+{%endfor%}
+<form method="post" action="{%url 'login'%}">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="username">
+    <input type="text" name="password" placeholder="password">
+    <button type="submit">login</button>
+</form>
